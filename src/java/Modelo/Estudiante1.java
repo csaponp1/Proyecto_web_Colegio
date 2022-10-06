@@ -147,8 +147,6 @@ public class Estudiante1 extends Persona1{
             parametro.setInt(9, getId());
             retorno = parametro.executeUpdate();
             cn.cerrar_conexion();
-            
-                
         }
         
         catch(HeadlessException | SQLException ex){

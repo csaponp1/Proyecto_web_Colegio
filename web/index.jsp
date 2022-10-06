@@ -17,12 +17,12 @@
     <body>
         
         <div class="container">
-        <header style="background-color: yellow;padding-bottom: 20px">
-            <h1>Formulario alumnos</h1>
+        <header style="background-image: url(https://img.freepik.com/free-vector/perspective-japanese-street-neon-lights_52683-44988.jpg);padding-bottom: 20px">
+            <h1 style="color: white">Formulario alumnos</h1>
         </header>
         <!<!-- Empieza el formulario de alumnos -->
         
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs bg-dark">
             <li class="nav-item">
               <a class="nav-link active" href="index.jsp">Inicio</a>
             </li>
@@ -35,7 +35,7 @@
             <li class="nav-item">
                 
                 <div class="btn-group">
-                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">Submenu</button>
+                <button type="button" class="btn-primary dropdown-toggle" data-bs-toggle="dropdown">Submenu</button>
                 <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Trabaja con nosotros</a>
                 <a class="dropdown-item" href="#">Se parte de nuestro equipo!</a>
@@ -66,10 +66,12 @@
                     <div>
                         <form action="sr_estudiante" method="post" class="form-group">
                         <label for="lbl_id"><b>ID</b></label>
+                        
                         <input type="text" name="txt_id" id="txt_id" class="form-control" readonly="" value="0">
 
                         <label for="lbl_codigo"><b>Carnet</b></label>
-                        <input type="text" name="txt_carnet" id="txt_carnet" class="form-control" placeholder="Ejemplo E0001" required>
+                        <input type="text" name="txt_carnet" id="txt_carnet" class="form-control" placeholder="Ejemplo E001" required pattern="[E]{1}[0-9]{3}">
+                        <P style="font-family: arial,times new roman, book antiqua; font-size: 13px; color: #ff0000">*formato permitido: Letra E+ tres digitos desde 0 - 9 y se pueden repetir</P>
 
                         <label for="lbl_nombres"><b>Nombres</b></label>
                         <input type="text" name="txt_nom" id="txt_nom" class="form-control" placeholder="Ejemplo: Byron Allan">
@@ -81,10 +83,10 @@
                         <input type="text" name="txt_dir" id="txt_dir" class="form-control" placeholder="Ejemplo: Ciudad zona pais">
 
                         <label for="lbl_tel"><b>Telefono</b></label>
-                        <input type="number" name="txt_tel" id="txt_tel" placeholder="Ejemplo> 33333333" class="form-control" >
+                        <input type="number" name="txt_tel" id="txt_tel" placeholder="Ejemplo: 33333333" class="form-control" >
                         
                         <label for="lbl_email"><b>Correo Electronico</b></label>
-                        <input type="text" name="txt_email" id="txt_email" class="form-control" placeholder="Ejemplo:ejemplo1@gmail.com">
+                        <input type="text" name="txt_email" id="txt_email" class="form-control" placeholder="Ejemplo: soyuncorreo@gmail.com">
                         
                         <label for="lbl_sangre"><b>Sangre</b></label>
                         <select name ="drop_sangre" id="drop_sangre" class="form-select">
@@ -117,6 +119,7 @@
         
         
         <div>
+            <h3 style="text-align:center">Tabla de Estudiantes registrados</h3>
             <br>
             <table class="table table-dark table-striped">
                 <thead>
@@ -154,10 +157,12 @@
               </table>
         </div>
         
-        <footer>
-            <div>
+        <!-- Empieza el footer -->
+        <br>
+        <footer style="background-color: #194a6a">
+            <div style="border-width: 2px; border-style: solid;border-color: #999999">
                 
-                 <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+                <nav class="navbar navbar-expand-sm bg-light justify-content-center" style="padding-top: 15px;padding-bottom: 15px">
                      <ul class="nav nav-tabs">
                          <li class="nav item"><a class="nav-link" href="#"> Quienes Somos </a></li>
                          <li class="nav item"> <a class="nav-link" href="#"> Siguenos en Twitter</a> </li>
@@ -165,9 +170,11 @@
                      </ul>
                  </nav>     
             </div>
-            <p>
-                Creado por Christian Sapon (c) 2022
+            
+                                <p style="font-family: times new roman; color: #ffffff">
+                Creado por Christian Sapon (c) 2022 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis, nisl in viverra semper, nibh quam efficitur augue, et elementum ex dui eu libero. Maecenas pretium massa nibh, a dictum leo commodo tincidunt. Duis aliquet ornare ex ac ultricies. Aliquam ligula nibh, pellentesque a cursus nec, scelerisque ac nunc. Proin laoreet non purus et aliquet. Aenean vel euismod purus. Donec tempor diam a pretium dictum. Ut augue lacus, consectetur sit amet bibendum eget, euismod non nulla. Ut quis justo vel nibh consequat ullamcorper et et sapien. Nullam nec scelerisque nisi. Phasellus venenatis facilisis imperdiet. Vivamus ut felis non dolor pellentesque ornare.
             </p>
+           
         </footer>
         
         </div>
